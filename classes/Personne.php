@@ -1,5 +1,5 @@
 <?php
-require 'Repository.php';
+include_once 'autoload.php';
 
 class Personne extends Repository
 {

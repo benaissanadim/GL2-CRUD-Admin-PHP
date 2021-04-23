@@ -1,15 +1,6 @@
 <?php
 session_start();
-/*
- * 1- Récupérer les identifiants
- * Tester si le login et le mot de passe correspondent
- * Si oui
- *  Redirige vers la page d'accueil
- * Si non
- *  Redirgie vers la page login avec un message d'erreur
- * */
 
-//1
 $email = $_POST['email'];
 $password = $_POST['pwd'];
 
