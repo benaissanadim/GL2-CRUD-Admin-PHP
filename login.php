@@ -8,18 +8,37 @@ include_once 'fragments/header.php';
     <div class="card-header text-center"><h3>Login Page</div> </h3>
     <div class="card-body">
         <?php
-        if (isset($_GET['errorMessage'])) { ?>
-        <div class="alert alert-danger">
-           <?= $_GET['errorMessage'] ?>
-        </div>
-        <?php } ?>
-        <br>
-        <form action="processlogin.php" method="post">
+        if (isset($_GET['errorMessage'])) {
+
+            ?>
+            <div class="alert alert-danger">
+                <?= $_GET['errorMessage'] ?>
+            </div>
+            <?php
+        }
+        ?>
+        <form action="processLogin.php" method="post">
             <div class="form-group">
-                 name: <input type="text" name="name" class="form-control"required>
-                <br> firstname: <input type="text" name="firstname" class="form-control"required>
-                <br> <button type="submit" class="btn btn-outline-primary" name="login">LOGIN</button>
-                <a href="sign.php"> <button type="button" class="btn btn-primary" name="signup">SIGN UP</button> </a>
+                <label for="exampleInputEmail1">Email address</label>
+                <input
+                        type="email"
+                        name="email"
+                        class="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                        placeholder="Enter email" required>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 <br>
-             </div>
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" name="pwd" class="form-control" value="" id="exampleInputPassword1" placeholder="Password" required><br>
+                <label for="check">
+                <input type="checkbox" class="form-check-input" id="check" onclick="myFunction()">Show Password </label>
+                <br> <br>
+                    <button type="submit" class="btn btn-primary">LOG IN</button>
         </form>
+
+    </div>
+<script> src="app.js"
+ </script>
+</body>
+</html>
