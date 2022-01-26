@@ -1,6 +1,6 @@
 <?php
-include_once 'isAuthenticated.php';
-include_once 'autoload.php';
+include_once 'crud/isAuthenticated.php';
+include_once 'crud/autoload.php';
 
 $bdd = ConnexionBD::getInstance();
 $pdoStat = $bdd->prepare('Select * FROM personne WHERE id=:id');
